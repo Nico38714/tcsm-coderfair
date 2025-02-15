@@ -3,6 +3,7 @@ import './ProjectCard.css';
 
 const ProjectCard = ({
   title = 'Project Name',
+  student = 'Student',
   description = 'Project Description',
   language = [],
   children,
@@ -32,6 +33,7 @@ const ProjectCard = ({
           <Badge color="blue">{projectLanguage}</Badge>
         ))}
       </Flex>
+      <Text>{student}</Text>
       <Text size="sm" c="dimmed">
         {description}
       </Text>

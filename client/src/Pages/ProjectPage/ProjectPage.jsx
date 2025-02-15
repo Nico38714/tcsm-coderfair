@@ -1,9 +1,19 @@
 import { Flex, Button, Title } from '@mantine/core';
-import ProjectData from '../data/projects.json';
-import ProjectCard from '../Components/ProjectCard/ProjectCard';
-import SearchBar from '../Components/SearchBar/SearchBar';
+import ProjectData from '../../data/projects.json';
+import ProjectCard from '../../Components/ProjectCard/ProjectCard';
+import SearchBar from '../../Components/SearchBar/SearchBar';
 const ProjectPage = () => {
   console.log(ProjectData);
+
+  function compareStudent(a, b) {
+    if (a.student.toLowerCase() > b.student.toLowerCase()) {
+      return 1;
+    } else {
+      return -1;
+    }
+  }
+
+  ProjectData.sort(compareStudent);
 
   return (
     <main className="ProjectPageMain">
@@ -20,6 +30,7 @@ const ProjectPage = () => {
               title={project.title}
               description={project.description}
               language={project.language}
+              student={project.student}
             />
           </div>
         ))}

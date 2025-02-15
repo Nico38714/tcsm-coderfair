@@ -1,24 +1,28 @@
 [
   {
     "title": "Wombat Web",
+    "student": "Nicolas Braem",
     "description": "Website about wombats!",
     "language": ["HTML", "CSS", "JS"]
   },
 
   {
     "title": "Rock, Paper, Scissors",
+    "student": "John Smith",
     "description": "Rock, Paper. Scissors game.",
     "language": ["Python"]
   },
 
   {
     "title": "Candy Clicker",
+    "student": "Nicolas Braem",
     "description": "Cookie Clicker but candy!",
     "language": ["HTML", "CSS", "JS"]
   },
 
   {
     "title": "Hangman",
+    "student": "Gabe Newell",
     "description": "Classic Hangman",
     "language": ["Python"]
   }
