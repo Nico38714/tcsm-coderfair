@@ -17,6 +17,7 @@ import Reset from './Pages/ResetPass/Reset';
 import AdminPage from './Pages/AdminPage/AdminPage';
 import Footer from './Components/Footer';
 import { AppShell } from '@mantine/core';
+import CoachesPage from './Pages/CoachesPage/CoachesPage'; // Import the new page
 function App() {
   // Custom Hook to show/hide NavBar based on the current route
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
             <Route path="/judging" element={<JudgingPage />} />
             <Route path="/reset" element={<Reset />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/coach" element={<CoachesPage />} />
           </Routes>
         </div>
         {showElements && <Footer />}

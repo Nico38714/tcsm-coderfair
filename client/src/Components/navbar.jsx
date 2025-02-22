@@ -52,6 +52,10 @@ const NavBar = () => {
             Admin
           </Link>
         </li>
+        <li>
+           <Link to="/coach" onClick={() => setOpened(false)}>Coach Dashboard</Link>
+        </li>
+
       </ul>
 
       {/* User Profile Dropdown */}
