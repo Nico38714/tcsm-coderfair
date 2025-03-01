@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Title, Divider, Grid } from '@mantine/core';
-//import ManageProjects from '../../Components/ManageProjects';
-//import ManageStudents from '../../Components/ManageStudents';
-//import ManageGrades from '../../Components/ManageGrades';
+import ManageCoderfair from '../../Components/ManageAdmin/ManageCoderfair';
+import ManageCoaches from '../../Components/ManageAdmin/ManageCoaches';
+import ManageJudges from '../../Components/ManageAdmin/ManageJudges';
 import './AdminPage.css';
 
-const CoachesPage = () => {
+const AdminPage = () => {
   const [projects, setProjects] = useState([
     { id: 1, name: 'Project Alpha', student: 'John Doe' },
     { id: 2, name: 'Project Beta', student: 'Jane Smith' },
@@ -23,22 +23,22 @@ const CoachesPage = () => {
 
   return (
     <Container className="coaches-container">
-      <Title className="coaches-title">Coach Dashboard</Title>
+      <Title className="coaches-title">Admin Dashboard</Title>
       <Divider className="section-divider" />
 
       <Grid>
         <Grid.Col span={12} md={5} lg={5}>
-          <ManageProjects project={projects} setProjects={setProjects} />
+          <ManageCoderfair project={projects} setProjects={setProjects} />
         </Grid.Col>
 
         <Grid.Col span={12} md={5} lg={5}>
-          <ManageStudents students={students} setStudents={setStudents} />
+          <ManageCoaches students={students} setStudents={setStudents} />
         </Grid.Col>
       </Grid>
 
       <Divider className="section-divider" />
 
-      <ManageGrades grades={grades} setGrades={setGrades} />
+      <ManageJudges grades={grades} setGrades={setGrades} />
     </Container>
   );
 };
