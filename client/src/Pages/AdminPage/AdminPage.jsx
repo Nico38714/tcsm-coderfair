@@ -6,19 +6,17 @@ import ManageJudges from '../../Components/ManageAdmin/ManageJudges';
 import './AdminPage.css';
 
 const AdminPage = () => {
-  const [projects, setProjects] = useState([
-    { id: 1, name: 'Project Alpha', student: 'John Doe' },
-    { id: 2, name: 'Project Beta', student: 'Jane Smith' },
+  const [coaches, setCoaches] = useState([
+    { id: 1, name: 'Francis Borja', contact: 'JohnDoe123@Gmail.com' },
+    { id: 2, name: 'Jared Sina Hernandez', contact: 'JaneSmith567@Yahoo.com' },
   ]);
-
-  const [students, setStudents] = useState([
-    { id: 1, name: 'John Doe', grade: 'A', bio: 'Great student!' },
-    { id: 2, name: 'Jane Smith', grade: 'B', bio: 'Needs improvement.' },
+  const [judges, setJudges] = useState([
+    { id: 1, name: 'Captain AMurica' },
+    { id: 2, name: 'Thor'},
   ]);
-
-  const [grades, setGrades] = useState([
-    { id: 1, project: 'Project Alpha', grade: 'A' },
-    { id: 2, project: 'Project Beta', grade: 'B' },
+  const [coderfair, setCoderFair] = useState([
+    { id: 1, name: 'March CoderFair 2067', date: '10/30/67' },
+    { id: 2, name: 'February Coderfair 4 AD', date: '1/11/4'},
   ]);
 
   return (
@@ -28,17 +26,17 @@ const AdminPage = () => {
 
       <Grid>
         <Grid.Col span={12} md={5} lg={5}>
-          <ManageCoderfair project={projects} setProjects={setProjects} />
+          <ManageCoderfair coderfair={coderfair} setCoderFair={setCoderFair} />
         </Grid.Col>
 
         <Grid.Col span={12} md={5} lg={5}>
-          <ManageCoaches students={students} setStudents={setStudents} />
+          <ManageCoaches coaches={coaches} setCoaches={setCoaches} />
         </Grid.Col>
       </Grid>
 
       <Divider className="section-divider" />
 
-      <ManageJudges grades={grades} setGrades={setGrades} />
+      <ManageJudges judges={judges} setJudges={setJudges} />
     </Container>
   );
 };
